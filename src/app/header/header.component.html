@@ -1,0 +1,14 @@
+<md-grid-tile-header>
+    <md-toolbar color="primary">
+        <span>Shop</span>
+
+        <button md-button (click)="showAddProductDialog()">
+            Add Product
+        </button>
+
+        <button md-button class="to-right" *ngIf="prod_service.products_in_cart.length > 0">
+            In cart <i>({{prod_service.products_in_cart.length}})</i>
+        </button>
+
+    </md-toolbar>
+</md-grid-tile-header>

@@ -1,0 +1,37 @@
+<h1 md-dialog-title>Add new product</h1>
+<form (submit)="addProduct($event)">
+    <md-card class="example-card">
+        <md-card-content>
+
+
+            <md-input-container class="example-full-width">
+                <input mdInput [(ngModel)]="prod.name" placeholder="Product name" name="name">
+            </md-input-container>
+
+            <md-input-container class="example-full-width">
+                <textarea mdInput [(ngModel)]="prod.desc" placeholder="Product description" name="desc"></textarea>
+            </md-input-container>
+
+
+            <md-input-container class="example-full-width">
+                <input mdInput placeholder="Product price" [(ngModel)]="prod.price" name="price" type="number">
+            </md-input-container>
+
+            <md-select placeholder="Category" [(ngModel)]="prod.cat" name="cat">
+                <md-option value="1">Black</md-option>
+                <md-option value="2">White</md-option>
+            </md-select>
+
+            <md-checkbox class="example-full-width" [(ngModel)]="prod.is_available" name="is_av">
+                Is available
+            </md-checkbox>
+
+
+        </md-card-content>
+        <md-card-actions>
+            <button md-button class="to-right">
+                Add product
+            </button>
+        </md-card-actions>
+    </md-card>
+</form>
